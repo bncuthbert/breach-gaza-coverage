@@ -1,5 +1,5 @@
 ## Quantifying Canadian media coverage of the war on Gaza
-This repository contains the code and data for an analysis of anti-Palestinian bias in the Canadian media conducted by [The Breach](htttp://www.breachmedia.ca).
+This repository contains the code and data for an analysis of anti-Palestinian bias in the Canadian media conducted by [The Breach](https://breachmedia.ca/palestinian-deaths-canadian-newspapers-data/).
 This project is heavily indebted to [Holly Jackson](https://github.com/hollyjackson/casualty_mentions_nyt/), who has performed similar analyses of American newspapers.
 
 ### **Installation**
@@ -24,12 +24,12 @@ Compiled articles can be found in `data/`.
 
 Scripts to replicate extraction are included in `src/`.
 
-**3. Sentence labeling:** Journalists at The Breach manually read every sentence and added two labels. The first indicates the victim in the sentence as "Israeli," "Palestinian," "Both," or "Neither." The second label indicates the perpetrator identified in the sentence as "Israel," "Hamas," "Both," or "Neither." Irrelevant sentences and a small number of sentences containing meaningless metadata/html were manually removed.
+**3. Sentence labeling:** The Breach manually read every sentence and added two labels. The first indicates the victim in the sentence as "Israeli," "Palestinian," "Both," or "Neither." The second label indicates the perpetrator identified in the sentence as "Israel," "Hamas," "Both," or "Neither." Irrelevant sentences and a small number of sentences containing meaningless metadata/html were manually removed.
 
 Compiled and labeled sentences are included in `data/`.
 
 ### **Caveats**
-There are three main limitations to this analysis. First, due to idiosyncratic and inconsistent article tags the scraping process was not very principled—especially for the Star and Post, which do not have relevant "topic" pages. Second, the automated tokenization and lemmatization is limited by the `nltk` language models used and the non-exhaustive list of fatal nouns and verbs checked. Finally, due to time and resource contraints articles were resticted to a limited set of tags. It should be assumed that some relevant articles and sentences published by the newspapers were missed. ***As a result, the datasets included in this repository should be considered representative samples and not an exhaustive archive.***
+There are three main limitations to this analysis. First, due to idiosyncratic and inconsistent article tags the scraping process was not very principled—especially for the Star and Post, which do not have relevant "topic" pages. Second, the automated tokenization and lemmatization is limited by the `nltk` language models used and the non-exhaustive list of fatal nouns and verbs checked. Finally, due to time and resource contraints articles were resticted to a limited set of tags. It should be assumed that some relevant articles and sentences published by the newspapers were missed. ***As a result, the datasets included in this repository are not an exhaustive archive.*** Considering that over 1000 relevant articles mentioning death were identified, it remains a comprehensive sample.
 
 ### **OCHA fatality data**
 This repository also includes a dataset including [fatality counts reported by the United Nations Office for the Coordination of Humanitarian Affairs (OCHA)](https://www.ochaopt.org/data/casualties). The numbers are pulled from the daily OCHA "Flash Updates," and are unconfirmed and subject to revision. Fatality counts are frequently revised and are impacted by communications blackouts and fog of war, so this is a time series of reported fatality estimates and not actual fatalities. 
@@ -37,7 +37,7 @@ This repository also includes a dataset including [fatality counts reported by t
 ![](./figures/ocha_deaths.png)
 
 ### **Results**
-The Breach has published several articles and infographics based on this analysis, but the following figures show the timecourse of references to death in coverage of the war on Gaza for each publication. Note: these plots include data from October 7th to November 24th—the beginning of the "humanitarian pause."
+The Breach has published several infographics based on this analysis, but the following figures show the timecourse of references to death in coverage of the war on Gaza for each publication. Note: these plots include data from October 7th to November 24th—the beginning of the "humanitarian pause."
 
 ![](./figures/globe_death_mentions.png)
 
